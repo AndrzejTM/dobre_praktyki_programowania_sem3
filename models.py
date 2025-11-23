@@ -44,7 +44,7 @@ class Link(Base):
     __tablename__ = "links"
 
     movieId = Column(Integer, ForeignKey("movies.movieId"), primary_key=True)
-    imdbId = Column(String)
-    tmdbId = Column(String)
+    imdbId = Column(Integer)
+    tmdbId = Column(Integer)
 
     movie = relationship("Movie", back_populates="links")

@@ -48,7 +48,7 @@ def load_tags(session):
 
 
 def load_links(session):
-    df = pd.read_csv("links.csv")
+    df = pd.read_csv("links.csv", dtype=str)
     links = [
         Link(
             movieId=row.movieId,
